@@ -1,8 +1,13 @@
 {
+  "version": 2,
   "rewrites": [
-    { "source": "/proxy/:match/:url*", "destination": "https://:match/:url*" },
-    { "source": "/proxy/:match/:url*/", "destination": "https://:match/:url*/" },
-    { "source": "/httpproxy/:match/:url*", "destination": "http://:match/:url*" },
-    { "source": "/httpproxy/:match/:url*/", "destination": "http://:match/:url*/" }
+    {
+      "source": "/twitch/token",
+      "destination": "https://id.twitch.tv/oauth2/token"
+    },
+    {
+      "source": "/igdb/(.*)",
+      "destination": "https://api.igdb.com/v4/$1"
+    }
   ]
 }
